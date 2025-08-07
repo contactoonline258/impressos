@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IMPRESSOS, E.I. - Centro de cópias, papelaria e comércio de eletrónicos em Nicoadala">
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+  <title>IMPRESSOS, E.I. - Comércio e Serviços</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="imagens/Logo.png" alt="Logo IMPRESSOS, E.I."></a>
+      </div>
+      <button id="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      <ul id="menu" class="menu">
+        <li><a href="Sobre.html">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre" class="secao sobre">
+      <div class="container">
+        <h1 class="titulo">BEM-VINDO À IMPRESSOS, E.I.</h1>
+        <p class="texto-justificado">Combinamos os Melhores Produtos e Serviços ao Melhor Preço.</p>
+      </div>
+    </section>
+
+    <section id="servicos" class="secao servicos">
+      <div class="container">
+        <h2 class="titulo">Nossos Serviços</h2>
+        <div class="cartoes-servico grid-layout">
+          <div class="cartao card" onclick="window.location.href='eletronicos.html'">
+            <i class="fas fa-laptop icon"></i>
+            <h3>Comércio de Eletrónicos</h3>
+            <p>Venda de Computadores & acessórios, Celulares & acessórios, Perifericos e outros dispositivos de pequeno a médio porte.</p>
+            <a href="electronicos.html" class="btn btn-link">Ver Produtos</a>
+          </div>
+          
+          <div class="cartao card" onclick="window.location.href='copias.html'">
+            <i class="fas fa-copy icon"></i>
+            <h3>Centro de Cópias</h3>
+            <p>Prestação de Serviços de Apoio Administrativo para estudantes, empresas e público em geral.</p>
+            <a href="centro_copias.html" class="btn btn-link">Ver Serviços</a>
+          </div>
+          
+          <div class="cartao card" onclick="window.location.href='papelaria.html'">
+            <i class="fas fa-pencil-alt icon"></i>
+            <h3>Papelaria</h3>
+            <p>Artigos escolares, Materiais de escritório e tudo o que precisa Acelerar os trâmites do seu dia a dia.</p>
+            <a href="papelaria.html" class="btn btn-link">Ver Produtos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="secao contacto">
+  <div class="container">
+   <form id="form-contacto" class="formulario" method="POST">
+    <h2>Fale Connosco</h2>
+    
+    <div class="campo-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="campo-form">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="campo-form">
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="btn">Enviar Mensagem</button>
+  </form>
+  </div>
+</section>
+        
+        <div class="info-contato">
+          <p><i class="fas fa-map-marker-alt"></i> EN1, Bairro Mola, Nicoadala</p>
+          <p><i class="fas fa-phone"></i> +25 86 960 5469</p>
+        </div>
+        
+        <div class="redes">
+          <a href="https://wa.me/258869605469" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://web.facebook.com/isa.gildo?locale=pt_BR" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/gildo_electromoz/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 IMPRESSOS, E.I. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

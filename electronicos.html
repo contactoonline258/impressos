@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Eletrónicos - IMPRESSOS, E.I.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="imagens/Logo.png" alt="Logo IMPRESSOS, E.I."></a>
+      </div>
+      <button id="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      <ul id="menu" class="menu">
+        <li><a href="Sobre.html">Sobre</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="secao">
+      <div class="container">
+        <h1 class="titulo">Comércio de Eletrónicos</h1>
+        <p class="subtitulo">Produtos de qualidade com garantia</p>
+        
+        <div class="catalogo grid-layout">
+          <!-- Produto 1 -->
+          <div class="produto card">
+            <img src="imagens/hp.webp" alt="Notebook HP 15s">
+            <h3>Notebook HP 15s</h3>
+            <p>Intel Core i5, 8GB RAM, 256GB SSD</p>
+            <div class="preco">25.000 MT</div>
+            <button class="btn-pedido btn" data-produto="Notebook HP 15s">Solicitar</button>
+          </div>
+          
+          <!-- Produto 2 -->
+          <div class="produto card">
+            <img src="imagens/A23.jpg" alt="Smartphone Samsung A23">
+            <h3>Smartphone Samsung A23</h3>
+            <p>128GB, 4GB RAM, Câmera 50MP</p>
+            <div class="preco">12.500 MT</div>
+            <button class="btn-pedido btn" data-produto="Smartphone Samsung A23">Solicitar</button>
+          </div>
+
+          <!-- Produto 3 -->
+          <div class="produto card">
+            <img src="imagens/ApleWach.jpeg" alt="Apple Watch Ultra 2">
+            <h3>Apple Watch Ultra 2 49mm</h3>
+            <p>Midnight Ocean Band</p>
+            <div class="preco">17.500 MT</div>
+            <button class="btn-pedido btn" data-produto="Apple Watch Ultra 2 49mm">Solicitar</button>
+          </div>
+          
+          <!-- Produto 4 -->
+          <div class="produto card">
+            <img src="imagens/Epson l3250.jpg" alt="Impressora Epson L3250">
+            <h3>Epson L3250 C/ WiFi</h3>
+            <p>Impressora com WiFi e Scanner</p>
+            <div class="preco">25.000 MT</div>
+            <button class="btn-pedido btn" data-produto="Epson L3250 C/ WiFi">Solicitar</button>
+          </div>
+
+          <!-- Produto 5 -->
+          <div class="produto card">
+            <img src="imagens/projector hy300 pro.jpg" alt="Projetor Magcubic Hy300">
+            <h3>Projetor Magcubic Hy300</h3>
+            <p>Android 11 4k Ultra HD</p>
+            <div class="preco">9.000 MT</div>
+            <button class="btn-pedido btn" data-produto="Projetor Magcubic Hy300">Solicitar</button>
+          </div>
+
+          <!-- Produto 6 -->
+          <div class="produto card">
+            <img src="imagens/ultrapods-pro-airpods.webp" alt="UltraPods Pro">
+            <h3>UltraPods Pro</h3>
+            <p>Fones sem fio estilo AirPods</p>
+            <div class="preco">1.500 MT</div>
+            <button class="btn-pedido btn" data-produto="UltraPods Pro">Solicitar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal/Popup -->
+    <div id="modal-pedido" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <form id="form-pedido" method="POST">
+                <h3>Solicitar: <span id="nome-produto"></span></h3>
+                <input type="hidden" name="produto" id="produto-hidden">
+                
+                <div class="campo-form">
+                    <input type="text" name="nome" placeholder="Seu nome completo*" required>
+                </div>
+                
+                <div class="campo-form">
+                    <input type="tel" name="telefone" placeholder="Seu telefone*" required>
+                </div>
+                
+                <div class="campo-form">
+                    <input type="email" name="email" placeholder="Seu e-mail (opcional)">
+                </div>
+                
+                <div class="campo-form">
+                    <input type="number" name="quantidade" placeholder="Quantidade*" min="1" value="1" required>
+                </div>
+                
+                <div class="campo-form">
+                    <textarea name="mensagem" placeholder="Observações"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Enviar Pedido</button>
+            </form>
+        </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 IMPRESSOS, E.I. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="pedidos.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Centro de Copias - IMPRESSOS, E.I.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="imagens/Logo.png" alt="Logo IMPRESSOS, E.I."></a>
+      </div>
+      <button id="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      <ul id="menu" class="menu">
+        <li><a href="Sobre.html">Sobre</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="secao">
+      <div class="container">
+        <h1 class="titulo">Centro de Cópias</h1>
+        <p class="subtitulo">Serviços de Apoio Administrativo</p>
+      <div class="catalogo grid-layout">
+    <!-- Serviço 1 -->
+    <div class="produto card">
+        <img src="imagens/copias.webp" alt="Impressão e Copias" class="produto-img">
+        <h3>Impressão & Cópias de Documentos</h3>
+        <p>Em folhas de papel A4 e A3</p>
+        <div class="preco">Preço Sob Consulta</div>
+        <button class="btn-consulta btn" data-servico="Impressao e Copias">Consultar</button>
+    </div>
+    
+    <!-- Serviço 2 -->
+    <div class="produto card">
+        <img src="imagens/digitaçao.jpg" alt="Digitação de Documentos" class="produto-img">
+        <h3>Digitação de Documentos</h3>
+        <p>Documentos Pessoais, Académicos e Profissionais</p>
+        <div class="preco">Preço Sob Consulta</div>
+        <button class="btn-consulta btn" data-servico="Digitação de Documentos">Consultar</button>
+    </div>
+    
+    <!-- Serviço 3 -->
+    <div class="produto card">
+        <img src="imagens/digitalizaçao.jpg" alt="Digitalizações" class="produto-img">
+        <h3>Digitalizações</h3>
+        <p>Serviços de Scan de Documentos para Envio ou arquivo digital</p>
+        <div class="preco">Preço Sob Consulta</div>
+        <button class="btn-consulta btn" data-servico="Digitalizações">Consultar</button>
+    </div>
+    
+    <!-- Serviço 4 -->
+    <div class="produto card">
+        <img src="imagens/Encadernaçao" alt="Encadernação" class="produto-img">
+        <h3>Encadernação</h3>
+        <p>Projectos Academicos ou de Concursos, entre outros</p>
+        <div class="preco">Preço Sob Consulta</div>
+        <button class="btn-consulta btn" data-servico="Encadernação">Consultar</button>
+    </div>
+
+    <!-- Serviço 5 -->
+    <div class="produto card">
+        <img src="imagens/Plastificaçao.jpg" alt="Plastificação" class="produto-img">
+        <h3>Plastificação</h3>
+        <p>Documentos de Identificação, Academicos, Profissionais, etc</p>
+        <div class="preco">Preço Sob Consulta</div>
+        <button class="btn-consulta btn" data-servico="Plastificação">Consultar</button>
+    </div>
+
+    <!-- Serviço 6 -->
+    <div class="produto card">
+        <img src="imagens/redaçao.jpg" alt="Projectos" class="produto-img">
+        <h3>Projectos</h3>
+        <p>Ajudamos a Elaborar/Redigir Documentos a partir do Zero (CVs, Cartas, Relatorios, Etc).</p>
+        <div class="preco">Preço sob Consulta</div>
+        <button class="btn-consulta btn" data-servico="Projectos">Consultar</button>
+    </div>
+    </div>
+ </div>
+    </section>
+
+    <!-- Modal/Popup para Consulta de Serviços -->
+    <div id="modal-consulta" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <form id="form-consulta" method="POST" enctype="multipart/form-data">
+          <h3>Consultar: <span id="nome-servico"></span></h3>
+          <input type="hidden" name="servico" id="servico-hidden">
+          
+          <div class="campo-form">
+            <input type="text" name="nome" placeholder="Seu nome completo*" required>
+          </div>
+          
+          <div class="campo-form">
+            <input type="tel" name="telefone" placeholder="Seu telefone*" required>
+          </div>
+          
+          <div class="campo-form">
+            <input type="email" name="email" placeholder="Seu e-mail (opcional)">
+          </div>
+          
+          <div class="campo-form">
+            <textarea name="mensagem" placeholder="Detalhes ou instruções"></textarea>
+          </div>
+          
+          <div class="campo-form">
+            <label>Enviar ficheiro (opcional):</label>
+            <input type="file" name="ficheiro" accept=".pdf,.doc,.docx,.ppt,.pptx,.txt,.jpg,.png">
+          </div>
+          
+          <button type="submit" class="btn">Enviar Consulta</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 IMPRESSOS, E.I. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="consultas.js"></script>
+</body>
+</html>
